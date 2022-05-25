@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Badge, Card, Divider, Space, Typography } from "antd"
 import { format, fromUnixTime } from "date-fns"
 const { Text } = Typography

@@ -1,10 +1,10 @@
-export const formatForcast = (data) => {
+export const formatForecast = (data) => {
   const { list } = data
-  const formattedForcast = {}
+  const formattedForecast = {}
   list.forEach((item) => {
     const dateStr = new Date(item.dt * 1000).toDateString()
-    formattedForcast[dateStr] = [
-      ...(formattedForcast[dateStr] || []),
+    formattedForecast[dateStr] = [
+      ...(formattedForecast[dateStr] || []),
       {
         timestamp: item.dt,
         temp: item.main.temp,
@@ -13,6 +13,6 @@ export const formatForcast = (data) => {
   })
   return {
     city: data.city.name,
-    weather: formattedForcast,
+    weather: formattedForecast,
   }
 }

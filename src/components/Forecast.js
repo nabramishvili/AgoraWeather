@@ -4,8 +4,8 @@ import DayWeather from "./DayWeather"
 
 const { Title } = Typography
 
-function Forcast({ forcast }) {
-  const { weather, city } = forcast
+function Forecast({ forecast }) {
+  const { weather, city } = forecast
 
   const days = Object.keys(weather).sort(
     (d1, d2) => Date.parse(d1) - Date.parse(d2)
@@ -19,7 +19,7 @@ function Forcast({ forcast }) {
   )
   return (
     <>
-      <Title level={3}> Forcast for {city} </Title>
+      <Title level={3}> Forecast for {city} </Title>
       <Row justify="space-between">
         {days.map((day) => (
           <Col span={3}>
@@ -27,7 +27,7 @@ function Forcast({ forcast }) {
               isHottest={hottestDay === day}
               key={day}
               day={day}
-              weather={forcast.weather[day]}
+              weather={forecast.weather[day]}
             />
           </Col>
         ))}
@@ -36,4 +36,4 @@ function Forcast({ forcast }) {
   )
 }
 
-export default Forcast
+export default Forecast

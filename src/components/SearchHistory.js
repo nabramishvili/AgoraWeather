@@ -1,6 +1,6 @@
 import React from "react"
 import { Collapse, Typography } from "antd"
-import Forcast from "./Forcast"
+import Forecast from "./Forecast"
 const { Panel } = Collapse
 const { Title } = Typography
 
@@ -12,9 +12,9 @@ const SearchHistory = ({ history }) => {
     <>
       <Title level={2}>Previusly Searched</Title>
       <Collapse>
-        {history.map((forcast) => (
-          <Panel header={forcast.city} key={forcast.city}>
-            <Forcast forcast={forcast} />
+        {history.map((forecast) => (
+          <Panel header={forecast.city} key={forecast.city}>
+            <Forecast forecast={forecast} />
           </Panel>
         ))}
       </Collapse>
