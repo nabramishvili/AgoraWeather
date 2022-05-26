@@ -10,7 +10,7 @@ const SearchHistory = ({ history }) => {
 
   return (
     <>
-      <Title level={2}>Previusly Searched</Title>
+      <Title level={2}>Previously Searched</Title>
       <Collapse>
         {history.map((forecast) => (
           <Panel header={forecast.city} key={forecast.city}>
